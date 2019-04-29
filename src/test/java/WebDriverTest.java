@@ -1,9 +1,6 @@
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 
 public class WebDriverTest {
 
@@ -28,11 +25,18 @@ public class WebDriverTest {
 
         mainSteps.onAllCarsPage().allParameters().click();
 
+        mainSteps.onAllCarsPage().priceFrom().sendKeys("500000");
+
         mainSteps.scrollToElement(mainSteps.onAllCarsPage().owner1());
 
         mainSteps.onAllCarsPage().owner1().click();
 
-        //mainSteps.shouldSeeUrl("cars/all/");
+        mainSteps.onAllCarsPage().checkboxPtsStatus().click();
+
+        mainSteps.onAllCarsPage().showResult().click();
+
+        mainSteps.shouldSeeUrl("cars/audi/all/?sort=fresh_relevance_1-desc&price_from=500000&" +
+                "owners_count_group=ONE&pts_status=1");
 
     }
 }

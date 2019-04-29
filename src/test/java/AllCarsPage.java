@@ -18,6 +18,14 @@ public interface AllCarsPage extends WebPage {
     @FindBy("//span[contains(@class, 'Button__text')][.='1 владелец']/parent::span/parent::button")
     HtmlElement owner1();
 
-    ////button[contains(@class, 'Button')][contains(., '1 владелец')]
+    @FindBy("//input[contains(@name, 'price_from')]")
+    HtmlElement priceFrom();
+
+    @FindBy("//input[contains(@name, 'pts_status')]")
+    HtmlElement checkboxPtsStatus();
+
+    @FindBy("//div[contains(@class, 'ListingCarsFilters-module__column')]//span[contains(., 'Показать')]")
+    HtmlElement showResult();
+
 }
 

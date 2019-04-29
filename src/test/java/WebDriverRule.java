@@ -10,12 +10,12 @@ public class WebDriverRule extends ExternalResource {
     protected void before() {
         webDriver = new ChromeDriver();
     }
-/*
+
     @Override
     protected void after() {
         webDriver.quit();
     }
-*/
+
     public WebDriver driver() {
         return webDriver;
     }

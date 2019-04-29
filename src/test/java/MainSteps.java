@@ -1,10 +1,8 @@
 import io.qameta.htmlelements.WebPage;
 import io.qameta.htmlelements.WebPageFactory;
 import io.qameta.htmlelements.element.HtmlElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
