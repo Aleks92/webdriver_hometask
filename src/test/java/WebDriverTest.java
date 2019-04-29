@@ -28,7 +28,10 @@ public class WebDriverTest {
 
         mainSteps.onAllCarsPage().allParameters().click();
 
-        mainSteps.scrollToElement(mainSteps.onAllCarsPage().owner1());
+        mainSteps.scrollToElement("//span[contains(@class, 'Button__text')][.='1 владелец']" +
+                "/parent::span/parent::button");
+
+        //mainSteps.scrollToElement();
 
         mainSteps.onAllCarsPage().owner1().click();
 

@@ -30,8 +30,9 @@ public class MainSteps {
         return on(AllCarsPage.class);
     }
 
-    public void scrollToElement(WebElement element){
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);",element);
+    public void scrollToElement(String xpath){
+        WebElement element = webDriver.findElement(By.xpath(xpath));
+        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
 
