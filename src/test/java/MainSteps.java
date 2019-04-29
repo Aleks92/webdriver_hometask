@@ -1,5 +1,6 @@
 import io.qameta.htmlelements.WebPage;
 import io.qameta.htmlelements.WebPageFactory;
+import io.qameta.htmlelements.element.HtmlElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -30,9 +31,9 @@ public class MainSteps {
         return on(AllCarsPage.class);
     }
 
-    public void scrollToElement(String xpath){
-        WebElement element = webDriver.findElement(By.xpath(xpath));
-        ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", element);
+    public void scrollToElement(HtmlElement element){
+        JavascriptExecutor jse = (JavascriptExecutor) webDriver;
+        jse.executeScript(String.format("window.scrollBy(0, %d)", element.getSize().getHeight() + 76));
     }
 
 
