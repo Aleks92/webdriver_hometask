@@ -15,11 +15,11 @@ public class MainSteps {
         this.webDriver = webDriver;
     }
 
-    public void  open(String url){
+    public void open(String url) {
         webDriver.get(url);
     }
 
-    public void  shouldSeeUrl(String url){
+    public void shouldSeeUrl(String url) {
         assertThat("Перешли на другую страницу",
                 webDriver.getCurrentUrl(),
                 containsString(url));
@@ -29,7 +29,7 @@ public class MainSteps {
         return on(AllCarsPage.class);
     }
 
-    public void scrollToElement(HtmlElement element){
+    public void scrollToElement(HtmlElement element) {
         JavascriptExecutor jse = (JavascriptExecutor) webDriver;
         jse.executeScript(String.format("window.scrollBy(0, %d)", element.getSize().getHeight() + 76));
     }

@@ -27,9 +27,9 @@ public class WebDriverTest {
 
         mainSteps.onAllCarsPage().priceFrom().sendKeys("500000");
 
-        mainSteps.scrollToElement(mainSteps.onAllCarsPage().owner1());
+        mainSteps.scrollToElement(mainSteps.onAllCarsPage().oneOwner());
 
-        mainSteps.onAllCarsPage().owner1().click();
+        mainSteps.onAllCarsPage().oneOwner().click();
 
         mainSteps.onAllCarsPage().checkboxPtsStatus().click();
 

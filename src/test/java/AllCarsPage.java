@@ -16,7 +16,7 @@ public interface AllCarsPage extends WebPage {
     HtmlElement allParameters();
 
     @FindBy("//span[contains(@class, 'Button__text')][.='1 владелец']/parent::span/parent::button")
-    HtmlElement owner1();
+    HtmlElement oneOwner();
 
     @FindBy("//input[contains(@name, 'price_from')]")
     HtmlElement priceFrom();
